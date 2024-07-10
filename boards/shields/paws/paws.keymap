@@ -1,7 +1,9 @@
+// Copyright (c) 2022 The ZMK Contributors
+// SPDX-License-Identifier: MIT
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
-<<<<<<< HEAD
 
 // Home row mods macro
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
@@ -28,9 +30,6 @@
         };
     };
 
-=======
-/{
->>>>>>> c0a64801a7c2aabde8938596989e7b90888be00c
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -39,14 +38,13 @@
         //│  Q       │  W       │  E       │  R       │  T       │   │  Y       │  U       │  I       │  O       │  P       │
             &kp Q      &kp W      &kp E      &kp R      &kp T          &kp Y      &kp U      &kp I      &kp O      &kp P
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-<<<<<<< HEAD
         //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │ ' "      │
             HRML(A,        S,         D,         F)     &kp G          &kp H      HRMR(J,        K,         L,        SQT)
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ / ?      │
             &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &kp END    &lt 2 TAB  &kp ENTER     &kp SPACE  &lt 1 BSPC  &kp HOME
+                                  &kp #      &lt 2 TAB   &kp ENTER     &kp SPACE  &lt 1 BSPC %kp $
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
@@ -65,7 +63,7 @@
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                   &trans     &trans     &kp ESC        &trans     &trans     &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
-            >;
+                    >;
         };
 
         left_layer {
@@ -97,24 +95,9 @@
         //│          │          │          │ CLEAR BT │PROFILE 2 │   │          │          │          │          │          │
             &trans     &trans     &trans    &bt BT_CLR &bt BT_SEL 2    &trans     &trans     &trans     &trans     &trans
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                  &trans     &trans     &trans         &trans     &trans     &trans
+                                  &trans    &trans     &trans         &trans     &trans     &trans
         //                      ╰──────────┴──────────┴──────────╯   ╰──────────┴──────────┴──────────╯
             >;
         };
     };
 };
-=======
-        //│  A       │  S       │  D       │  F       │  G       │   │  H       │  J       │  K       │  L       │BACKSPACE │
-            &kp A      &kp S      &kp D      &kp F      &kp G          &kp H      &kp J      &kp K      &kp L      &kp BSPC
-        //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  Z       │  X       │  C       │  V       │  B       │   │  N       │  M       │ , <      │ . >      │ ENTER    │
-            &kp Z      &kp X      &kp C      &kp V      &kp B          &kp N      &kp M      &kp COMMA  &kp DOT    &kp ENTER
-        //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                           &lt LEF TAB  &kp LSHIFT    &kp SPACE  &lt RIG TAB
-        //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
-            >;
-            
-        };
-    }
-}
->>>>>>> c0a64801a7c2aabde8938596989e7b90888be00c
