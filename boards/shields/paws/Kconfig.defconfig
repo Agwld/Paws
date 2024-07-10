@@ -1,7 +1,7 @@
 if SHIELD_PAWS_LEFT
 
 config ZMK_KEYBOARD_NAME
-    default "Split Paws Keyboard"
+    default "Split Paws Keeb"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
