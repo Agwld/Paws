@@ -2,6 +2,7 @@
 // SPDX-License-Identifier: MIT
 
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -23,6 +24,11 @@
         tri_layer {
             if-layers = <1 2>;
             then-layer = <2>;
+        };
+
+        Bluetooth {
+            if-layers = <1 5>;
+            then-layer = <6>;
         };
     };
 
@@ -80,6 +86,15 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Bluetooth {
+            bindings = <
+&trans          &trans  &trans      &none       &bt BT_SEL 0  &trans  &trans  &trans  &trans  &trans
+&trans          &trans  &bt BT_NXT  &bt BT_PRV  &bt BT_SEL 1  &trans  &trans  &trans  &trans  &trans
+&bt BT_CLR_ALL  &trans  &trans      &trans      &bt BT_SEL 2  &trans  &trans  &trans  &trans  &trans
+                        &trans      &trans      &trans        &trans  &trans  &trans
             >;
         };
     };
